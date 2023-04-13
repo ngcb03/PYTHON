@@ -7,6 +7,21 @@ palabras=["enero", "febrero", "marzo", "abril", "mayo", "junio"]
 print("Palabra con mas caracteres:",mascaracteres(palabras))
 
 
-Última modificación: 08-04-23
+Última modificación: 13-04-23
 
 """
+# funciones
+def mascaracteres(palabras):
+  mayorPalabra = palabras[0]
+  for f in range(len(palabras)-1):
+    if len(mayorPalabra)<len(palabras[f+1]):
+      mayorPalabra=palabras[f+1]
+    elif len(mayorPalabra)==len(palabras[f+1]):
+      print(palabras[f])
+      mayorPalabra=palabras[palabras.index(palabras[f])]
+  return mayorPalabra
+
+
+# instrucciones complementarias
+palabras = ["enero", "febrero", "marzo", "abril", "mayo", "junio"]
+print("Palabra con mas caracteres:",mascaracteres(palabras))
